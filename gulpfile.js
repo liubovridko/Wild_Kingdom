@@ -29,9 +29,9 @@ function watcher() {
 }
 
 //поcледовательное выполнение шрифтов
-//const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-const mainTasks = gulp.parallel(copy, html, scss, js, images);
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server)); //developer mode
 const build = gulp.series(reset, mainTasks); //production mode
 const deployZIP = gulp.series(reset, mainTasks, zip);

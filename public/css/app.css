@@ -1,5 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+._icon-clock:before {
+  content: "\e900";
+}
+
+._icon-geo:before {
+  content: "\e901";
+}
+
+._icon-play:before {
+  content: "\e902";
+}
+
+._icon-quotes:before {
+  content: "\e903";
+}
+
+._icon-s-inst:before {
+  content: "\e904";
+}
+
+._icon-slider-arrow:before {
+  content: "\e905";
+}
+
+._icon-s-medium:before {
+  content: "\e906";
+}
+
+._icon-s-tiktok:before {
+  content: "\e907";
+}
+
+._icon-s-tw:before {
+  content: "\e908";
+}
+
 .button {
   display: inline-block;
   background-color: #fe5f1e;
