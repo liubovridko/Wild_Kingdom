@@ -29,7 +29,7 @@ function watcher() {
 }
 
 //поcледовательное выполнение шрифтов
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+const fonts = gulp.series(ttfToWoff, fontsStyle);
 
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server)); //developer mode
