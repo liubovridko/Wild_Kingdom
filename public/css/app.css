@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 @font-face {
@@ -81,156 +82,32 @@
   }
 }
 */
+/*стилі будуть застосовуватися до всіх класів,
+що містить *__container
+Наприклад header__container, main__container і тп*/
+[class*=__container] {
+  max-width: 100.125rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.block-header__label {
+  line-height: 156.25%;
+  text-transform: capitalize;
+}
+.block-header__title {
+  color: #9D875C;
+  text-transform: capitalize;
+  font-family: Italiana;
+  font-size: 3rem;
+}
 .button {
-  display: inline-block;
-  background-color: #fe5f1e;
-  border-radius: 30px;
-  padding: 10px 20px;
-  min-width: 100px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  border: 1px solid transparent;
-  /* @include noselect(); */
+  background: url("../img/bg-button.png") center no-repeat;
+  display: inline-flex;
+  padding: 0px 0px;
 }
-.button span {
-  color: #fff;
-}
-.button i,
-.button span,
-.button path,
-.button svg {
-  transition: all 0.15s ease-in-out;
-}
-.button:hover {
-  background-color: #f24701;
-}
-.button:active {
-  background-color: #de4101;
-  transform: translateY(1px);
-}
-.button--circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  padding: 0;
-  border-width: 2px;
-}
-.button--black {
-  background-color: #232323;
-}
-.button--black:hover, .button--black:active {
-  background-color: #3d3d3d;
-}
-.button--outline {
-  background-color: #fff;
-  border-color: #fe5f1e;
-}
-.button--outline,
-.button--outline span {
-  color: #fe5f1e;
-}
-.button--outline svg path {
-  fill: #fe5f1e;
-}
-.button--outline:hover {
-  background-color: #fe5f1e;
-}
-.button--outline:hover,
-.button--outline:hover span {
-  color: #fff;
-}
-.button--outline:hover svg path {
-  fill: #fff;
-}
-.button--outline:active {
-  background-color: #f24701;
-}
-.button--grey {
-  background-color: #fff;
-  border-color: #e2e2e2;
-}
-.button--grey,
-.button--grey span {
-  color: #e2e2e2;
-}
-.button--grey:hover {
-  background-color: #fff;
-  border-color: #232323;
-}
-.button--grey:hover,
-.button--grey:hover span {
-  color: #232323;
-}
-.button--grey:hover svg path {
-  stroke: #232323;
-}
-.button--grey:active {
-  border-color: #e2e2e2;
-}
-.button__delimiter {
-  width: 1px;
-  height: 25px;
-  background-color: rgba(255, 255, 255, 0.25);
-  margin-left: 14px;
-  margin-right: 14px;
-}
-.button--add {
-  background: #ffffff;
-  border: 1px solid #eb5a1e;
-  border-radius: 30px;
-}
-.button--add svg {
-  margin-right: 2px;
-}
-.button--add span {
-  font-weight: 600;
-  font-size: 16px;
-  color: #fe5f1e;
-}
-.button--add:hover i {
-  background-color: #fff;
-  color: #fe5f1e;
-}
-.button--add:hover,
-.button--add:hover span {
-  color: #fff;
-}
-.button--add:hover svg path {
-  fill: #fff;
-}
-.button--add i {
-  /* display: inline-block; */
-  border-radius: 30px;
-  background-color: #fe5f1e;
-  color: #fff;
-  font-weight: 600;
-  width: 22px;
-  height: 22px;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 22px;
-  position: relative;
-  top: -1px;
-  left: 3px;
-  display: none;
-}
-.button--cart {
-  display: flex;
-  align-items: center;
-  line-height: 23px;
-  padding: 12px 25px;
-}
-.button--cart svg {
-  margin-right: 8px;
-  margin-bottom: 1px;
-}
-.button--cart span {
-  font-weight: 600;
-  font-size: 16px;
+.button--fw {
+  width: 100%;
 }
 
 * {
@@ -280,7 +157,9 @@ a {
 }
 
 body {
-  background: #ffdf8c;
+  background: #EFE9DD;
+  font-family: "Montserrat";
+  font-size: 16px;
 }
 
 .wrapper {
