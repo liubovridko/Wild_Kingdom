@@ -3,6 +3,9 @@
 //header block
 
 .block-header {
+   display: grid;
+   gap: toRem(20);
+   justify-items: start;
 &__label {
    line-height: 156.25%;//25/16
    text-transform: capitalize;
@@ -14,11 +17,16 @@
    font-size: toRem(48);
 }
 &__text {
+   line-height: 156.25%;//25/16
+   display: grid;
+   gap: toRem(20);
+
+   blockquote {
+      font-style: italic;
+   }
 }
-.text {
-}
+
 &__button {
 }
-.button {
-}
+
 }
