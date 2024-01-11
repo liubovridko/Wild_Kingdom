@@ -1,10 +1,12 @@
 @use 'sass:math';
+
+@import "base/mixins";
 //@import "fonts";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import "fonts/fonts";
 @import "fonts/icons";
-@import "base/mixins";
+
 @import "variables";
 
 //bounding container
