@@ -12,400 +12,112 @@
 	<body>
 		<div class="wrapper">
 			<header class="header">
-	<div class="container">
-		<div class="header__logo">
-			<img src="img/logo.png" width="38" height="38" />
-			<div>
-				<h1>REACT PIZZA</h1>
-				<p>найсмачніша піцца у всесвіті</p>
-			</div>
-		</div>
-		<div class="header__cart">
-			<a href="cart-empty.html" class="button button--cart">
-				<span id="total">520 uan</span>
-				<div class="line-divided"></div>
-				<svg
-					width="18"
-					height="18"
-					viewBox="0 0 18 18"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M6.33333 16.3333C7.06971 16.3333 7.66667 15.7364 7.66667 15C7.66667 14.2636 7.06971 13.6667 6.33333 13.6667C5.59695 13.6667 5 14.2636 5 15C5 15.7364 5.59695 16.3333 6.33333 16.3333Z"
-						stroke="white"
-						stroke-width="1.8"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/>
-					<path
-						d="M14.3333 16.3333C15.0697 16.3333 15.6667 15.7364 15.6667 15C15.6667 14.2636 15.0697 13.6667 14.3333 13.6667C13.597 13.6667 13 14.2636 13 15C13 15.7364 13.597 16.3333 14.3333 16.3333Z"
-						stroke="white"
-						stroke-width="1.8"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/>
-					<path
-						d="M4.78002 4.99999H16.3334L15.2134 10.5933C15.1524 10.9003 14.9854 11.176 14.7417 11.3722C14.4979 11.5684 14.1929 11.6727 13.88 11.6667H6.83335C6.50781 11.6694 6.1925 11.553 5.94689 11.3393C5.70128 11.1256 5.54233 10.8295 5.50002 10.5067L4.48669 2.82666C4.44466 2.50615 4.28764 2.21182 4.04482 1.99844C3.80201 1.78505 3.48994 1.66715 3.16669 1.66666H1.66669"
-						stroke="white"
-						stroke-width="1.8"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/>
-				</svg>
-
-				<span id="count">1</span>
-			</a>
-		</div>
-	</div>
-</header>
+  <div class="header__container">
+    <div class="header__menu menu">
+      <button type="button" class="menu__icon icon-menu">
+        <span></span>
+      </button>
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="" class="menu__link">
+              Home
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">
+              About
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">
+              Products
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">
+              Services
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__logo">
+      <svg
+        width="217"
+        height="78"
+        viewBox="0 0 217 78"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22.0115 0H0.37707L0 4.07611H0.0471338C3.39363 2.48315 5.56179 0.749629 8.05988 0.749629H9.04969V30.1726H13.3389V0.749629H14.2815C16.7796 0.749629 19.0421 2.53 22.3886 4.12297H22.4828L22.0115 0Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M48.6226 0V14.1024H33.7754V0H29.5334V30.1726H33.7754V14.8521H48.6226V30.1726H52.8646V0H48.6226Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M68.9704 29.423H66.5666V14.8521H74.485V14.1024H66.5666V0.749629H68.9704C72.5526 0.749629 76.7946 1.03074 78.3971 5.29426H79.2927L79.2456 0H62.3245V30.1726H79.2456L79.2927 24.8784H78.3971C76.7946 29.1419 72.5526 29.423 68.9704 29.423Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M139.638 0C138.365 3.93556 137.328 6.93408 135.16 12.978L131.483 23.5665L123.376 0H123.188L114.892 23.5665L106.785 0H102.26L113.007 30.8286H113.148L121.491 7.21519L129.692 30.8286H129.834L135.961 13.2591C137.799 8.10538 139.119 4.31038 140.91 0H139.638Z"
+          fill="#C1AB81"
+        />
+        <path d="M152.236 30.1726V0H147.994V30.1726H152.236Z" fill="#C1AB81" />
+        <path
+          d="M177.802 24.8784C176.199 29.1419 171.957 29.423 168.375 29.423H165.971V0H161.729V30.1726H178.65L178.697 24.8784H177.802Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M196.564 0H185.959V30.1726H195.857C206.179 30.1726 212.636 24.5036 212.636 14.7584C212.636 5.20056 206.179 0 196.564 0ZM196.564 29.5167C193.217 29.5167 191.285 29.3762 190.201 29.1419V0.702778H196.187C203.351 0.702778 207.97 6.41871 207.97 14.9926C207.97 24.2693 203.822 29.5167 196.564 29.5167Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M7.19361 77.0245V46.8519H2.95157V77.0245H7.19361ZM25.7643 46.9456V46.8519H24.1618C21.8522 49.054 18.9771 51.7245 14.4994 55.9412L8.51336 61.5634L18.9299 77.0245H24.5389L12.0013 59.4082L15.0178 56.5503C18.8828 52.8958 22.2293 49.8036 25.7643 46.9456Z"
+          fill="#C1AB81"
+        />
+        <path d="M36.9929 77.0245V46.8519H32.7508V77.0245H36.9929Z" fill="#C1AB81" />
+        <path
+          d="M66.7534 46.8519C66.7534 46.8519 66.7534 47.3204 66.7534 60.0642V70.231L50.1152 46.8519H45.0719V46.9925L47.0986 49.8036V76.9777H47.9471V50.9749L67.2248 77.5399H67.6019V46.8519H66.7534Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M92.5275 63.3438L92.9989 64.0934H99.9747V74.3071C98.1365 75.7595 95.3084 76.7903 92.2447 76.7903C85.1747 76.7903 80.5084 70.6527 80.5084 61.8914C80.5084 52.8958 84.7505 47.0393 91.3963 47.0393C93.5645 47.0393 94.8371 48.3512 95.7798 50.0847C97.288 52.8021 100.917 53.4112 103.133 51.256L103.227 51.2091C100.729 48.4449 96.6753 46.3834 91.7734 46.3834C82.6766 46.3834 75.8422 52.5678 75.8422 62.1725C75.8422 71.8708 82.2995 77.5399 92.0562 77.5399C97.4295 77.5399 101.2 75.7127 103.887 73.7449V63.3438H92.5275Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M122.949 46.8519H112.344V77.0245H122.242C132.565 77.0245 139.022 71.3555 139.022 61.6103C139.022 52.0525 132.565 46.8519 122.949 46.8519ZM122.949 76.3686C119.603 76.3686 117.67 76.2281 116.586 75.9938V47.5547H122.572C129.737 47.5547 134.356 53.2706 134.356 61.8445C134.356 71.1212 130.208 76.3686 122.949 76.3686Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M162.053 46.3834C153.003 46.3834 146.027 52.5678 146.027 62.2662C146.027 71.7771 152.862 77.5399 161.534 77.5399C170.537 77.5399 177.56 71.3555 177.56 61.6571C177.56 52.1462 170.725 46.3834 162.053 46.3834ZM161.959 76.884C155.313 76.884 150.694 70.8401 150.694 61.7977C150.694 52.8958 155.03 47.0393 161.723 47.0393C168.275 47.0393 172.894 53.0832 172.894 62.1256C172.894 71.0275 168.557 76.884 161.959 76.884Z"
+          fill="#C1AB81"
+        />
+        <path
+          d="M213.702 46.8519H209.884L201.07 69.0597L191.031 46.8519H186.459V46.9925L187.354 48.9602L184.715 76.9777H185.516L188.014 50.5064L199.326 75.1505H199.515L209.696 49.4756L212.288 77.0245H216.577L213.702 46.8519Z"
+          fill="#C1AB81"
+        />
+      </svg>
+    </div>
+    <div class="header__action action-header">
+      <a href="#" class="action-header__link">
+        Log in
+      </a>
+      <a href="#" class="action-header__link">
+        Register
+      </a>
+      <button class="action-header__button button button--border">
+        <span>Contact</span>
+      </button>
+    </div>
+  </div>
+</header>;
 
 			<main class="page">
-				<!-- <div class="container">
-					<div class="block__filter">
-						<div class="sort__category">
-							<ul>
-								<li class="active"><a href=""> Усі</a></li>
-								<li><a href="">М'ясні</a></li>
-								<li><a href="">Веган </a></li>
-								<li><a href="">Гриль</a></li>
-								<li><a href="">Гострі </a></li>
-								<li><a href="">Закриті </a></li>
-							</ul>
-						</div>
-						<div class="sort">
-							<div class="sort__label">
-								<svg
-									width="10"
-									height="6"
-									viewBox="0 0 10 6"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M10 5C10 5.16927 9.93815 5.31576 9.81445 5.43945C9.69075 5.56315 9.54427 5.625 9.375 5.625H0.625C0.455729 5.625 0.309245 5.56315 0.185547 5.43945C0.061849 5.31576 0 5.16927 0 5C0 4.83073 0.061849 4.68424 0.185547 4.56055L4.56055 0.185547C4.68424 0.061849 4.83073 0 5 0C5.16927 0 5.31576 0.061849 5.43945 0.185547L9.81445 4.56055C9.93815 4.68424 10 4.83073 10 5Z"
-										fill="#2C2C2C"
-									/>
-								</svg>
-								<b>Сортування за:</b>
-								<span id="popular-sort">популярні</span>
-							</div>
-							<div class="sort__popup">
-								<ul>
-									<li class="active">популярні</li>
-									<li>ціною</li>
-									<li>алфавітом</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<h2 class="content__title">Усі піцци</h2>
-					<div class="content__items">
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/1.png" />
-							</div>
-							<h3 class="pizza-block__title">Чизбургер піцца</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 395грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додати</span>
-									<i style="display: inline-block">2</i>
-								</div>
-							</div>
-						</div>
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/2.png" />
-							</div>
-							<h3 class="pizza-block__title">Сирна</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 450грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додади</span>
-									<i>2</i>
-								</div>
-							</div>
-						</div>
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/3.png" />
-							</div>
-							<h3 class="pizza-block__title">По азійські</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 290грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додади</span>
-									<i>2</i>
-								</div>
-							</div>
-						</div>
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/4.png" />
-							</div>
-							<h3 class="pizza-block__title">Фірмова</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 385грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додади</span>
-									<i>2</i>
-								</div>
-							</div>
-						</div>
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/1.png" />
-							</div>
-							<h3 class="pizza-block__title">Чизбургер піцца</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 395грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додади</span>
-									<i>2</i>
-								</div>
-							</div>
-						</div>
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/2.png" />
-							</div>
-							<h3 class="pizza-block__title">Сирна</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 450грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додади</span>
-									<i>2</i>
-								</div>
-							</div>
-						</div>
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/3.png" />
-							</div>
-							<h3 class="pizza-block__title">По азійські</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 290грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додади</span>
-									<i>2</i>
-								</div>
-							</div>
-						</div>
-						<div class="pizza-block">
-							<div class="pizza-block__image">
-								<img src="img/pizza/4.png" />
-							</div>
-							<h3 class="pizza-block__title">Фірмова</h3>
-							<div class="pizza-block__options">
-								<ul>
-									<li class="active">тонке</li>
-									<li>традиційне</li>
-								</ul>
-								<ul>
-									<li>26 см</li>
-									<li class="active">30 см</li>
-									<li>40 см</li>
-								</ul>
-							</div>
-							<div class="pizza-block__bottom">
-								<div class="pizza-block__price">від 385грн</div>
-								<div class="button button--add">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
-											fill="#EB5A1E"
-										/>
-									</svg>
-									<span>Додади</span>
-									<i></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<div class="block-header">
-  <div class="block-header__label">About us</div>
-  <h2 class="block-header__title">Treating pet like Royalty</h2>
-  <div class="block-header__text text">
-    <blockquote>“They’re not just pets, they’re family”</blockquote>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue ultrices, in
-      tempus elit tristique. Aliquam ultrices sem non.
-    </p>
-  </div>
-  <a class="block-header__button button">
-    <span>Explore</span>
-  </a>
-</div>;
-
+				
 			</main>
 			<footer>
 	<script type="text/javascript" src="js/app.min.js"></script>

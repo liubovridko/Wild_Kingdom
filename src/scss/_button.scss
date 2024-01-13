@@ -10,10 +10,7 @@
   padding: toRem(10) toRem(40);
   background-color: white;
   cursor: pointer;
- 
-  &--fw {
-    width: 100%;
-  }
+
   &::before {
     content: '';
     position: absolute;
@@ -26,11 +23,27 @@
     background: url("../img/bg-button.png") center no-repeat;
     background-size: cover;
   }
+
+  &--fw {
+    width: 100%;
+  }
+  &--border {
+    transition: all 0.3s;
+    background: transparent;
+    border: toRem(1) solid $bgGold;
+    color: $bgGold;
+    &::before{
+      opacity: 0;;
+    }
+  }
+  
   span {
     position: relative;
   }
   @media (any-hover: hover) {
     &:hover {
+      color:$mainColor;
+      border: toRem(1) solid transparent;
       &::before {
         opacity: 1;
       }
