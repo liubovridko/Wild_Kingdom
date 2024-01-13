@@ -125,9 +125,6 @@
   background-color: white;
   cursor: pointer;
 }
-.button--fw {
-  width: 100%;
-}
 .button::before {
   content: "";
   position: absolute;
@@ -140,10 +137,26 @@
   background: url("../img/bg-button.png") center no-repeat;
   background-size: cover;
 }
+.button--fw {
+  width: 100%;
+}
+.button--border {
+  transition: all 0.3s;
+  background: transparent;
+  border: 0.0625rem solid #C1AB81;
+  color: #C1AB81;
+}
+.button--border::before {
+  opacity: 0;
+}
 .button span {
   position: relative;
 }
 @media (any-hover: hover) {
+  .button:hover {
+    color: #222220;
+    border: 0.0625rem solid transparent;
+  }
   .button:hover::before {
     opacity: 1;
   }
