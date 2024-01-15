@@ -67,6 +67,8 @@
    margin: $flyValue;
  } @else if $property == 'padding' {
    padding: $flyValue;
+ } @else if $property == 'width' {
+   width: $flyValue;
  } @else {
    // Handle other properties as needed
    // ...
@@ -81,6 +83,8 @@
        margin: $keepSize;
      } @else if $property == 'padding' {
        padding: $keepSize;
+     } @else if $property == 'width' {
+       width: $keepSize;
      } @else {
        // Handle other properties as needed
        // ...
