@@ -92,7 +92,7 @@
   padding-bottom: 0.625rem;
 }
 .header__logo {
-  width: 4.4247269891rem "+" 9.1263650546vw;
+  width: calc(4.4247269891rem + 9.1263650546vw);
 }
 .menu__list {
   display: flex;

@@ -1,3 +1,4 @@
+@import "../variables";
 //font include
 @mixin font($font_name, $file_name, $weight, $style){
    @font-face {
@@ -58,7 +59,8 @@
    @if ($yIntersection==0){
       $yIntersection: 0.000001;
    }
-   $flyValue: #{toRem($yIntersection)}"+" #{$slope *100}vw;
+   //$flyValue: #{toRem($yIntersection)}"+" #{$slope *100}vw;
+   $flyValue: calc(#{toRem($yIntersection)} + #{$slope * 100}vw);
 
    // Mixin for different properties
   @if $property == 'font-size' {
