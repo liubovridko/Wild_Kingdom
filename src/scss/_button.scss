@@ -31,7 +31,13 @@
     transition: all 0.3s;
     background: transparent;
     border: toRem(1) solid $bgGold;
-    color: $bgGold;
+       span {
+        color: $bgGold;
+         &:hover {
+          color: $mainColor;
+         }
+       }
+    
     &::before{
       opacity: 0;;
     }
@@ -39,6 +45,7 @@
   
   span {
     position: relative;
+
   }
   @media (any-hover: hover) {
     &:hover {
