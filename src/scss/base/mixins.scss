@@ -71,6 +71,12 @@
    padding: $flyValue;
  } @else if $property == 'width' {
    width: $flyValue;
+ } @else if $property == 'min-height' {
+   min-height: $flyValue;
+ } @else if $property == 'height' {
+    height: $flyValue;
+ } @else if $property == 'column-gap' {
+    column-gap: $flyValue;
  } @else {
    // Handle other properties as needed
    // ...
@@ -87,6 +93,12 @@
        padding: $keepSize;
      } @else if $property == 'width' {
        width: $keepSize;
+     } @else if $property == 'min-height' {
+       min-height: $keepSize;
+     } @else if $property == 'height' {
+        height: $keepSize;
+     } @else if $property == 'column-gap' {
+       column-gap: $keepSize;
      } @else {
        // Handle other properties as needed
        // ...
