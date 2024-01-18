@@ -16,3 +16,29 @@ export function isWebp() {
     document.documentElement.classList.add(classname);
   });
 }
+
+/*toggle menu buger*/
+
+export function toogleMenu() {
+  var burgerIcon = document.getElementById('burgerIcon');
+  var menu = document.getElementById('menu');
+
+  // Добавляем обработчик события для клика на бургер-иконке
+  burgerIcon.addEventListener('click', function () {
+    // Переключаем класс "open" для меню
+    menu.classList.toggle('open');
+    burgerIcon.classList.toggle('menu-open');
+  });
+
+  // Добавляем обработчик события для закрытия меню при клике вне его области на маленьких экранах
+  document.addEventListener('click', function (event) {
+    if (
+      window.innerWidth <= 768 &&
+      !burgerIcon.contains(event.target) &&
+      !menu.contains(event.target)
+    ) {
+      menu.classList.remove('open');
+      burgerIcon.classList.remove('menu-open');
+    }
+  });
+}

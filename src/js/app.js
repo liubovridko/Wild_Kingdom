@@ -1,7 +1,7 @@
 import * as flsFunctions from './modules/functions.js';
 
 flsFunctions.isWebp();
-
+flsFunctions.toogleMenu();
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
