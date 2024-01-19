@@ -30,9 +30,11 @@
       @media (max-width: $mobile) {
          position: relative;
          z-index: 5;
-         path{
-            fill:#fff;
-         }
+         .menu-open & {
+            path{
+               fill:#fff;
+            }
+         }      
       }
    }
 
@@ -59,10 +61,11 @@
          gap: toRem(20);
          width: 100%;
          height: 100%;
-         left:0;
+         left:-100%;
          top: 0;
          overflow: auto;
          background-color: $bgGold;
+         transition: left 0.3s;
          padding: toRem(100) toRem(15) toRem(30) toRem(15);
          &::before {
             content: "";
@@ -71,8 +74,15 @@
             @include adaptiveValue("height", 152, 70);
             z-index: 2;
             top: 0;
-            left: 0;
+            left: -100%;
+            transition: left 0.3s;
             background-color: $bgGold;
+         }
+         .menu-open & {
+            left:0;
+            &::before {
+               left:0;
+            }
          }
       }
    }
@@ -112,6 +122,11 @@
          color: #fff;
          font-size: toRem(28);  
         }
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
    }
 }
 .icon-menu {
@@ -140,6 +155,12 @@
       @media (max-width: $mobile) {
          color: #fff;
          z-index: 5;
+         font-size: toRem(28);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
       }
    }
 
@@ -183,7 +204,10 @@
          position: absolute;
          width: 100%;
          height: toRem(2);
-         background-color: #fff;
+         background-color: $bgGold;
+         .menu-open {
+            background-color: #fff;
+         }  
       }
       &::before {
          top:0;
