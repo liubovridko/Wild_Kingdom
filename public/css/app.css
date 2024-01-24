@@ -104,7 +104,7 @@
     position: relative;
     z-index: 5;
   }
-  .header__logo path {
+  .menu-open .header__logo path {
     fill: #fff;
   }
 }
@@ -116,10 +116,11 @@
     gap: 1.25rem;
     width: 100%;
     height: 100%;
-    left: 0;
+    left: -100%;
     top: 0;
     overflow: auto;
     background-color: #C1AB81;
+    transition: left 0.3s;
     padding: 6.25rem 0.9375rem 1.875rem 0.9375rem;
   }
   .menu__body::before {
@@ -129,8 +130,15 @@
     height: calc(3.09574883rem + 6.3962558502vw);
     z-index: 2;
     top: 0;
-    left: 0;
+    left: -100%;
+    transition: left 0.3s;
     background-color: #C1AB81;
+  }
+  .menu-open .menu__body {
+    left: 0;
+  }
+  .menu-open .menu__body::before {
+    left: 0;
   }
 }
 .menu__list {
@@ -160,6 +168,11 @@
   .menu__link {
     color: #fff;
     font-size: 1.75rem;
+  }
+}
+@media (any-hover: hover) {
+  .menu__link:hover {
+    text-decoration: underline;
   }
 }
 
@@ -192,6 +205,12 @@
   .action-header__link {
     color: #fff;
     z-index: 5;
+    font-size: 1.75rem;
+  }
+}
+@media (any-hover: hover) {
+  .action-header__link:hover {
+    text-decoration: underline;
   }
 }
 @media (max-width: 61.99875em) {
@@ -235,6 +254,9 @@
     position: absolute;
     width: 100%;
     height: 0.125rem;
+    background-color: #C1AB81;
+  }
+  .icon-menu span .menu-open, .icon-menu::before .menu-open, .icon-menu::after .menu-open {
     background-color: #fff;
   }
   .icon-menu::before {
@@ -259,6 +281,53 @@
   }
 }
 
+.footer {
+  position: relative;
+  padding: 0rem 0rem 0rem 0rem;
+  background-color: #222220;
+}
+.footer::before, .footer::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10.875rem;
+}
+.footer::before {
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: url("../img/footer-decor.svg") left bottom/100% no-repeat;
+}
+.footer::after {
+  content: "";
+  right: 0;
+  top: 0;
+  transform: rotate(-180deg);
+  background: url("../img/footer-decor.svg") left bottom/100% no-repeat;
+}
+.footer__body {
+  padding: calc(1.6887675507rem + 4.0561622465vw);
+  padding: calc(1.6409906396rem + 1.1700468019vw);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer__content {
+  border-right: 0.0625rem solid #C1AB81;
+}
+.footer__logo {
+  justify-self: center;
+  width: calc(1.8174726989rem + 15.9126365055vw);
+}
+.footer__copy {
+  padding: calc(0.5162831513rem + 2.1060842434vw);
+  padding: calc(0.5162831513rem + 2.1060842434vw);
+}
+
+.subscribe {
+  border-left: 0.0625rem solid #C1AB81;
+  display: grid;
+  justify-items: end;
+}
 /*стилі будуть застосовуватися до всіх класів,
 що містить *__container
 Наприклад header__container, main__container і тп*/
