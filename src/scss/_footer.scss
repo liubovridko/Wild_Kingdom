@@ -2,6 +2,7 @@
    position: relative;
    padding: toRem(0) toRem(0) toRem(0) toRem(0);
    background-color: $bgDark;
+   color: $bgGold;
    // .footer__container
    &::before,&::after{
       content: '';
@@ -13,14 +14,14 @@
       content: '';
       left: 0;
       bottom: 0;
-      background: url('../img/footer-decor.svg') left bottom / 100% no-repeat;
+      background: url('../img/footer-decor.svg') left bottom / 50% no-repeat;
    }
    &::after{
       content: '';
       right: 0;
       top: 0;
       transform: rotate(-180deg);
-      background: url('../img/footer-decor.svg') left bottom / 100% no-repeat;
+      background: url('../img/footer-decor.svg') left bottom / 50% no-repeat;
    }
 
    &__container {
@@ -69,6 +70,7 @@
    &__copy {
       @include adaptiveValue("padding-top", 42, 15);
       @include adaptiveValue("padding-buttom", 42, 15);
+      text-align: center;
    }
 }
 .menu-footer {
@@ -76,6 +78,7 @@
    // .menu-footer__title
 
    &__title {
+      
    }
 
    // .menu-footer__list
@@ -98,6 +101,7 @@
    // .social__item
 
    &__item {
+      color: $bgGold;
    }
 }
 
@@ -126,3 +130,19 @@
    &__button {
    }
 }
+
+[data-spollers] {
+   cursor: pointer;
+ }
+
+ [data-spollers] summary {
+   outline: none;
+ }
+
+[data-spollers] summary::before {
+   content: "▼"; /* Change arrow direction for small screens */
+ }
+
+ [data-spollers] [open] summary::before {
+   content: "►"; /* Change arrow direction when spoiler is open on small screens */
+ }
