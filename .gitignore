@@ -26,3 +26,11 @@ yarn-error.log*
 gulp/version.json
 .prettierrc
 public/js/app.min.js
+public/cart-empty.html
+gulp/version.json
+public/cart-empty.html
+public/cart.html
+public/index.html
+public/css/app.css
+public/css/app.min.css
+src/html/footer.html
