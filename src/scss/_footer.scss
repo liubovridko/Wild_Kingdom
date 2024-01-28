@@ -45,6 +45,9 @@
    // .footer__menu
 
    &__menu {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 40, 20);
+      }
    }
 
    // .footer__social
@@ -111,19 +114,30 @@
       font-weight: 300;
       line-height: 156%;
       display: inline-block;
+      transition: color 0.3s;
       @media (any-hover: hover) {
          &:hover {
-            text-decoration: underline;
+            color:$goldColorHover
          }
       }
    }
 }
 .social {
-
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: toRem(3);
+   @include adaptiveValue("column-gap",41, 15);
    // .social__item
 
    &__item {
       color: $bgGold;
+      font-size: toRem(24);
+      transition: color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color:$goldColorHover
+         }
+      }
    }
 }
 
@@ -131,10 +145,13 @@
    border-left: toRem(1) solid $bgGold;
    display: grid;
    justify-items: end;
-
+   color: $bgGold;
    // .subscribe__title
 
    &__title {
+      font-family: "Italiana";
+      font-size: toRem(32);
+      color: $bgGold;
    }
 
    // .subscribe__form
