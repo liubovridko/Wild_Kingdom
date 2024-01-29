@@ -67,6 +67,10 @@
    font-size: $flyValue;
  } @else if $property == 'margin' {
    margin: $flyValue;
+ } @else if $property == 'margin-right' {
+   margin-right: $flyValue;
+ } @else if $property == 'margin-left' {
+   margin-left: $flyValue;
  } @else if $property == 'margin-bottom' {
    margin-bottom: $flyValue;
  } @else if $property == 'padding' {
@@ -95,6 +99,10 @@
        font-size: $keepSize;
      } @else if $property == 'margin' {
        margin: $keepSize;
+    } @else if $property == 'margin-right' {
+         margin-right: $keepSize;
+    } @else if $property == 'margin-left' {
+         margin-left: $keepSize;
      } @else if $property == 'margin-bottom' {
          margin-bottom: $keepSize;
      } @else if $property == 'padding' {
