@@ -172,12 +172,14 @@
       display: flex;
       height: toRem(40);
       border-bottom: toRem(1) solid rgb(193, 171, 129, 0.2);
+      font-family: "Italiana";
    }
 
    // .subscribe__input
 
    &__input {
       flex: 1 1 auto;
+      border: none;
    }
 
    // .subscribe__button
@@ -185,6 +187,8 @@
    &__button {
       background: transparent;
       border: none;
+      font-family: "Italiana";
+      color: $bgGold;
    }
 }
 
