@@ -32,6 +32,13 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
+
+[class*=" _icon-"] {
+   &:before {
+    @extend %ic !optional;
+    display: block;
+   }
+}
 ._icon-clock:before {
    content: "\e900";
  }

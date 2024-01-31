@@ -9,6 +9,9 @@
       position: absolute;
       height: 50%;
       width: toRem(174);
+      @media (max-width: em(1640)){
+         opacity: 0.1;
+      }
    }
    &::before{
       content: '';
@@ -25,6 +28,8 @@
    }
 
    &__container {
+      position: relative;
+      z-index: 5;
    }
 
    // .footer__body
@@ -34,13 +39,27 @@
       @include adaptiveValue("padding-buttom", 45, 30);
       display: grid;
       grid-template-columns: repeat(3,1fr);
+      @media (max-width: $tablet){
+         grid-template-columns: repeat(2,1fr);
+      }
+      @media (max-width: $mobile){
+         grid-template-columns: auto;
+      }
    }
 
    // .footer__content
 
    &__content {
-      border-right: toRem(1) solid $bgGold;
-      @include adaptiveValue("margin-right", 40, 15);
+      @include adaptiveValue("padding-right", 40, 15);
+      @media (max-width: $tablet){
+         order: 2;
+      }
+      @media (max-width: $mobile){
+         order: 3;
+      } 
+      @media (min-width: $tablet){
+         border-right: toRem(1) solid $bgGold;
+      }
    }
 
    // .footer__menu
@@ -60,14 +79,30 @@
 
    &__logo {
       justify-self: center;
-      @include adaptiveValue("width",284,80);
+      align-self: center;
+      @include adaptiveValue("width",284,100);
+      @media (max-width: $tablet){
+         order: 1;
+         grid-column: span 2;
+         &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 20);
+         }
+      }
+      @media (max-width: $mobile){
+         grid-column: span 1;
+      }
    }
 
    // .footer__subscribe
 
    &__subscribe {
-   
-      
+      @media (max-width: $tablet){
+         order: 3;
+      }
+      @media (max-width: $mobile){
+         order: 2;
+         @include adaptiveValue("margin-bottom", 40, 20);
+      }  
    }
 
    // .footer__copy
@@ -76,6 +111,8 @@
       @include adaptiveValue("padding-top", 42, 15);
       @include adaptiveValue("padding-buttom", 42, 15);
       text-align: center;
+      border-top: toRem(1) solid $bgGold;
+      line-height: 120%;
    }
 }
 .menu-footer {
@@ -92,6 +129,16 @@
       }
       &:not(:last-child) {
          margin-bottom: toRem(15);
+      }
+      ._spoller-init &{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         &::after {
+            @extend %ic !optional;
+            content: "\e905";
+         }
+
       }
    }
 
@@ -130,7 +177,9 @@
    row-gap: toRem(3);
    @include adaptiveValue("column-gap",41, 15);
    // .social__item
-
+   @media (max-width: $mobile){
+     justify-content: space-between;
+   }
    &__item {
       color: $bgGold;
       font-size: toRem(24);
@@ -145,24 +194,28 @@
 }
 
 .subscribe {
-   border-left: toRem(1) solid $bgGold;
-   @include adaptiveValue("padding-left", 40, 15);
+   
+   @include adaptiveValue("padding-left", 40, 15, 2, $containerWidth, 767.98);
    padding-left: toRem(40);
-   display: grid;
-   justify-content: end;
-   color: $bgGold;
+   @media (min-width: $mobile){
+      border-left: toRem(1) solid $bgGold;
+      display: grid;
+      justify-content: end;  
+   } 
    // .subscribe__title
    &__body {
-      max-width: toRem(350);
+      @media (min-width: $mobile){
+        max-width: toRem(350);
+      }
    }
    &__title {
       font-family: "Italiana";
       font-weight: normal;
-      font-size: toRem(32);
+      @include adaptiveValue("font-size",32, 18);
       color: $bgGold;
       line-height: 120%;
       &:not(:last-child) {
-         margin-bottom: toRem(25);
+         @include adaptiveValue("margin-bottom", 25, 10);
       }
    }
 
@@ -172,7 +225,16 @@
       display: flex;
       height: toRem(40);
       border-bottom: toRem(1) solid rgb(193, 171, 129, 0.2);
-      font-family: "Italiana";
+      position: relative;
+      .form-error{
+         position: absolute;
+         top: 100%;
+         left: 0;
+         font-size: toRem(11);
+         color: red;
+         margin-top: toRem(5);
+      }
+      
    }
 
    // .subscribe__input
@@ -180,6 +242,8 @@
    &__input {
       flex: 1 1 auto;
       border: none;
+      font-family: "Montserrat";
+
    }
 
    // .subscribe__button
@@ -187,8 +251,15 @@
    &__button {
       background: transparent;
       border: none;
-      font-family: "Italiana";
       color: $bgGold;
+      transition: color 0.3s;
+      cursor: pointer;
+      font-family: "Montserrat";
+      @media (any-hover) {
+         &:hover{
+            color: $goldColorHover;
+         }
+      }
    }
 }
 

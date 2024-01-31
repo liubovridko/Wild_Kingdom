@@ -51,8 +51,8 @@
       $widthFrom: $maxWidth;
    }
    //breakpoints in em
-   $withFromMedia: em($widthFrom);
-   $withToMedia: em($widthTo);
+   $widthFromMedia: em($widthFrom);
+   $widthToMedia: em($widthTo);
    //https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
    $slope : math.div(($startSize - $minSize), ($widthFrom - $widthTo));
    $yIntersection : -$widthTo * $slope + $minSize;
