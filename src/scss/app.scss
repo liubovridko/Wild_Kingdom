@@ -68,6 +68,17 @@ body {
 	font-size: $fontSize;
 }
 
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+.page {
+	box-sizing: border-box;
+	min-height: 100%;
+	padding-bottom: 90px;
+}
+
 // .wrapper {
 // 	width: calc(100vw - 100px);
 // 	height: 100%;
