@@ -75,10 +75,12 @@
    margin-bottom: $flyValue;
  } @else if $property == 'padding' {
    padding: $flyValue;
+ } @else if $property == 'padding-left' {
+   padding-left: $flyValue;
  } @else if $property == 'padding-top' {
-    padding: $flyValue;
- } @else if $property == 'padding-buttom' {
-    padding: $flyValue;
+    padding-top: $flyValue;
+ } @else if $property == 'padding-bottom' {
+   padding-bottom: $flyValue;
  } @else if $property == 'width' {
    width: $flyValue;
  } @else if $property == 'min-height' {
@@ -108,9 +110,11 @@
      } @else if $property == 'padding' {
        padding: $keepSize;
      } @else if $property == 'padding-top' {
-        padding: $keepSize;
-     } @else if $property == 'padding-buttom' {
-        padding: $keepSize;
+        padding-top: $keepSize;
+     } @else if $property == 'padding-left' {
+      padding-left: $keepSize;
+     } @else if $property == 'padding-bottom' {
+      padding-bottom: $keepSize;
      } @else if $property == 'width' {
        width: $keepSize;
      } @else if $property == 'min-height' {
