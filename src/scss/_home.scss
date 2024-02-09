@@ -16,6 +16,7 @@
    // .hero__content
 
    &__content {
+      max-width: toRem(650);
    }
 
    // .hero__title
@@ -23,7 +24,7 @@
    &__title {
       @include adaptiveValue("font-size", 100, 42);
       font-family: "Italiana";
-      color: $goldColor;
+      color: $bgGold;
       text-transform: capitalize;
       &:not(:last-child) {
          @include adaptiveValue("margin-bottom", 35, 15);
