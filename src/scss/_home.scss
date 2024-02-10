@@ -1,8 +1,9 @@
 .hero {
    position: relative;
    min-height: 100vh;
-   display: flex;
-   align-items: center;
+   //display: flex;
+   //align-items: center;
+   padding-top: 250px;
    // .hero__container
 
    &__container {
@@ -89,6 +90,9 @@
    // .slide-hero__body
 
    &__body {
+      border-radius: 50%;
+      width:41%;/*650/1572*/
+      aspect-ratio: 1/1;
    }
 
    // .slide-hero__image
