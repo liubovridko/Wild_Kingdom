@@ -5,11 +5,12 @@ flsFunctions.isWebp()
 flsFunctions.toogleMenu()
 /*module "Spollers"*/
 flsFunctions.spollers()
-import Swiper from 'swiper'
-import { Navigation, Pagination } from 'swiper/modules'
 
-// init Swiper:
-const swiper = new Swiper('.swiper', {
-  // configure Swiper to use modules
-  modules: [Navigation, Pagination],
-})
+//===================================================================================================================
+//Слайдер Swiper
+//====================================================================================================================
+/* 
+Налаштування підключення плагіна Swiper відбувається у файлі "./files/sliders.js"
+Документація https://swiperjs.com/
+ */
+//import "./files/sliders.js"
