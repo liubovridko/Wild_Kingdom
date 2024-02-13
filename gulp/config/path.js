@@ -15,7 +15,7 @@ export const path = {
 	},
 	src: {
 		js: `${srcFolder}/js/app.js`,
-		images: `${srcFolder}/img/**/*.{jpeg, jpg, webp, gif,png}`,
+		images: `${srcFolder}/img/**/**/*.{jpeg,jpg,webp,gif,png}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		scss: `${srcFolder}/scss/app.scss`,
 		html: `${srcFolder}/*.html`, //.pug
@@ -23,7 +23,7 @@ export const path = {
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
-		images: `${srcFolder}/img/**/*.{jpeg, jpg, svg, webp, gif,png}`,
+		images: `${srcFolder}/img/**/*.{jpeg,jpg,svg,webp,gif,png}`,
 		scss: `${srcFolder}/scss/**/*.scss`,
 		html: `${srcFolder}/**/*.html`, //.pug
 		files: `${srcFolder}/files/**/*.*`,
