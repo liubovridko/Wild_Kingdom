@@ -10,7 +10,9 @@ import { Navigation, Pagination } from 'swiper/modules';
 //Повний набір стилів з scss/libs/swiper.scss
 //import "../scss/libs/swiper/scss";
 //Повний набір стилів з node_modules
-import "swiper/css";
+//import "swiper/css";
+
+//import 'swiper/swiper-bundle.css'; 
 
 
 // init Swiper:
@@ -22,9 +24,9 @@ function initSliders() {
            modules: [Navigation],
            observer: true,
            observeParents: true,
-           slidesPerView: 3,
+           slidesPerView: 'auto',
            spaceBetween: 0,
-           autoHeight: true,
+           //autoHeight: true,
            speed: 800,
            loop: true,
            //autoHeight: true,
@@ -81,6 +83,10 @@ function initSliders() {
             // },
             // 992: {
             //    slidesPerView: 3,
+            //    spaceBetween: 20,
+            // },
+            // 1268: {
+            //    slidesPerView: 4,
             //    spaceBetween: 20,
             // },
                         
@@ -150,4 +156,6 @@ function initSliders() {
        });
    }
 }
+document.addEventListener("DOMContentLoaded", initSliders);
+
 

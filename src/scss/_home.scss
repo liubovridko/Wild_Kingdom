@@ -91,15 +91,18 @@
 
    &__body {
       border-radius: 50%;
-      //width:41%;/*650/1572*/
-      aspect-ratio: 1/1;
+      width:toRem(125);
+      aspect-ratio: 1 / 1;
+      .swiper-slide-active &{
+         width: toRem(650);
+      }
    }
 
    // .slide-hero__image
 
    &__image {
+      max-width: 100%;
    }
 }
-.swiper-slide {
-}
+
 
