@@ -13,4 +13,4 @@ flsFunctions.spollers()
 Налаштування підключення плагіна Swiper відбувається у файлі "./files/sliders.js"
 Документація https://swiperjs.com/
  */
-//import "./files/sliders.js"
+import "./files/sliders.js"
