@@ -30,7 +30,7 @@ function initSliders() {
            speed: 800,
            loop: true,
            //autoHeight: true,
-           centeredSlides: true,
+           //centeredSlides: true,
    
            //touchRatio: 0,
            //simulateTouch: false,
@@ -94,6 +94,18 @@ function initSliders() {
            
            // Події
            on: {
+            // beforeSlideChangeStart: function (slider) {
+            //     const activeSlide= document.querySelector('.hero__slider .swiper-slide-active');
+            //     slider.slides.forEach(slide =>{
+            //        slide.style.width='';
+            //     });
+            //     activeSlide.style.width='650px';
+            //     console.log(slider);
+            //     console.log(slider.slides);
+            // },
+            // slideChangeTransitionEnd: function (slider) {
+            //     slider.update();
+            // }
             // slideChange: function () {
             //    let titlePrevIndex = this.realIndex - 1;
             //    let titleNextIndex = this.realIndex + 1;
