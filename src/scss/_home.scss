@@ -1,13 +1,13 @@
 .hero {
    position: relative;
    min-height: 100vh;
-   //display: flex;
-   //align-items: center;
-   padding-top: 250px;
+   display: flex;
+   align-items: center;
    // .hero__container
 
    &__container {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 44% 1fr;
       align-items: center;
       padding-top: toRem(150);
       padding-bottom: toRem(50);
@@ -15,21 +15,22 @@
       z-index: 2;
       flex-grow: 1;
    }
-
+   &__body{
+   }
    // .hero__content
 
    &__content {
-      max-width: toRem(645);
+      margin-right: -48%;
       position: relative;
       z-index: 2;
-     // margin-right: toRem(-206);
    }
 
    // .hero__title
 
    &__title {
-      @include adaptiveValue("font-size", 100, 42);
+      @include adaptiveValue("font-size", 90, 42);
       font-family: "Italiana";
+      font-weight: 400;
       color: $bgGold;
       text-transform: capitalize;
       &:not(:last-child) {
@@ -45,8 +46,7 @@
    // .hero__slider
 
    &__slider.swiper{
-      flex: 0 0 toRem(700);/* 650/1572 */
-      width: toRem(700);
+      margin: 0;
    }
 
    // .hero__wrapper
@@ -62,16 +62,21 @@
    // .hero__controls
 
    &__controls {
+      margin-left: 20px;
    }
 
    // .hero__arrow
 
    &__arrow {
+      background: transparent;
+      border: none;
+      cursor: pointer;
    }
 
    // .hero__arrow--left
 
    &__arrow--left {
+      transform: rotate(180deg);
    }
 
    // .hero__arrow--right
@@ -94,8 +99,9 @@
 
 .slide-hero {
    border: toRem(1) solid $bgGold;
-   padding: toRem(24);
+   @include adaptiveValue("padding", 24, 10);
    border-radius: 50%;
+   //flex: 1 1 auto;
    // .slide-hero__body
 
    &__body {
