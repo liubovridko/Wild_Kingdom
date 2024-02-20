@@ -47,6 +47,8 @@
 
    &__slider.swiper{
       margin: 0;
+      padding-top: toRem(50);
+      padding-bottom: toRem(50);
    }
 
    // .hero__wrapper
@@ -111,14 +113,20 @@
       width: 100%;
       overflow: hidden;
       position: relative;
-      .swiper-slide-active &{
-      }
    }
 
    // .slide-hero__image
 
    &__image {
-      max-width: 100%;
+     width: 100%;
+      margin-top: -15.384615%;
+   }
+   &__top-image{
+      position: absolute;
+      top: -11%;
+      @include adaptiveValue("left", 17, 10);
+      width: calc(100% - toRem(50));
+      opacity: 0.5;
    }
 }
 
