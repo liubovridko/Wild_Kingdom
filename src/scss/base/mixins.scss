@@ -87,6 +87,8 @@
    min-height: $flyValue;
  } @else if $property == 'height' {
     height: $flyValue;
+ } @else if $property == 'left' {
+    left: $flyValue;
  } @else if $property == 'column-gap' {
     column-gap: $flyValue;
  } @else {
@@ -123,6 +125,8 @@
         height: $keepSize;
      } @else if $property == 'column-gap' {
        column-gap: $keepSize;
+     } @else if $property == 'left' {
+        left: $keepSize;
      } @else {
        // Handle other properties as needed
        // ...
