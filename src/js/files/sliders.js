@@ -94,18 +94,17 @@ function initSliders() {
            
            // Події
            on: {
-            // beforeSlideChangeStart: function (slider) {
-            //     const activeSlide= document.querySelector('.hero__slider .swiper-slide-active');
-            //     slider.slides.forEach(slide =>{
-            //        slide.style.width='';
-            //     });
-            //     activeSlide.style.width='650px';
-            //     console.log(slider);
-            //     console.log(slider.slides);
-            // },
-            // slideChangeTransitionEnd: function (slider) {
-            //     slider.update();
-            // }
+               init: function (slider) {
+                slider.slides.forEach(slide =>{
+                    const imageSrc = slide.querySelector('.slide-hero__image').getAttribute('src');
+                    const topImage = `									
+                    <div class="slide-hero__top-image">
+                       <img src="${imageSrc}" alt="Image">
+                    </div>
+                    `;
+                    slide.insertAdjacentHTML('beforeend',topImage);
+                })
+               }
             // slideChange: function () {
             //    let titlePrevIndex = this.realIndex - 1;
             //    let titleNextIndex = this.realIndex + 1;
@@ -169,5 +168,28 @@ function initSliders() {
    }
 }
 document.addEventListener("DOMContentLoaded", initSliders);
+
+//Scroll on base slider
+function initSlidersScroll(){
+    let sliderScrollItems=document.querySelector('.swiper_scroll');
+    if (sliderScrollItems.length > 0) {
+        for (let index=0; index < sliderScrollItems.lenght; index++) {
+            const sliderScrollItem = sliderScrollItems[index];
+            const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
+            const sliderScroll = new Swiper(sliderScrollItem, {
+                observer:true,
+                observeParents:true,
+                direction:'vertical',
+                slidesPerView:'auto',
+                freeMode:{
+                    enabled:true,
+                },
+                scrollbar:{
+                    el:sliderScrollBar,
+                },
+            })
+        }
+    }
+}
 
 
