@@ -86,6 +86,10 @@
    &__arrow--right {
    }
 
+   // .hero__mini-slider
+
+   &__mini-slider {
+   }
    // .hero__bg
 
    &__bg {
@@ -104,7 +108,11 @@
    border: toRem(1) solid $bgGold;
    @include adaptiveValue("padding", 24, 10);
    border-radius: 50%;
-   //flex: 1 1 auto;
+   flex: 1 1 auto;
+   &--mini {
+      flex: 0 0 auto;
+      padding: toRem(3);
+   }
    // .slide-hero__body
 
    &__body {
@@ -130,6 +138,22 @@
       img {
          max-width: 100%;
       }
+   }
+}
+
+.mini-slider {
+   padding-top: toRem(30);
+   padding-bottom: toRem(30);
+   padding-left: toRem(40);
+   transform: translate(0,-30%);
+   // .mini-slider__wrapper
+
+   &__wrapper {
+   }
+
+   // .mini-slider__slide
+
+   &__slide {
    }
 }
 
