@@ -3,7 +3,7 @@
  */
 
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Controller } from 'swiper/modules';
 
 //Базові стилі
 //import "../../scss/base/swiper.scss";
@@ -19,9 +19,9 @@ import { Navigation, Pagination } from 'swiper/modules';
 function initSliders() {
    if (document.querySelector('.hero__slider')) { 
        // Створюємо слайдер
-        new Swiper('.hero__slider', { 
+       const mainSlider = new Swiper('.hero__slider', { 
            
-           modules: [Navigation],
+           modules: [Navigation,Controller],
            observer: true,
            observeParents: true,
            slidesPerView: 'auto',
@@ -165,13 +165,15 @@ function initSliders() {
    
            }
        });
-        new Swiper('.hero__mini-slider', { 
+       const miniSlider = new Swiper('.hero__mini-slider', { 
            
-        modules: [Navigation],
+        modules: [Navigation,Controller],
         observer: true,
         observeParents: true,
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 20,
+        loopAdditionalSlides:10,
+        slideToClickedSlide: true,
         //autoHeight: true,
         speed: 800,
         loop: true,
@@ -252,7 +254,9 @@ function initSliders() {
              })
             }
         }
-    });
+       });
+       mainSlider.controller.control = miniSlider;
+       miniSlider.controller.control = mainSlider;
    }
 }
 document.addEventListener("DOMContentLoaded", initSliders);
