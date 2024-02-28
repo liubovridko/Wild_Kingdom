@@ -40,10 +40,14 @@
     "gulp-zip": "^5.1.0",
     "normalize.css": "^8.0.1",
     "prettier": "^3.0.2",
-    "sass": "^1.66.1",
-    "swiper": "^10.2.0",
+    "sass": "latest",
+    "sass-loader": "latest",
+    "style-loader": "3.3.4",
+    "swiper": "latest",
     "vinyl-ftp": "^0.6.1",
+    "webpack":"latest",
+    "webpack-cli": "latest",
     "webp-converter": "2.2.3",
-    "webpack-stream": "^7.0.0"
+    "webpack-stream": "latest"
   }
 }
