@@ -7,7 +7,7 @@
 
    &__container {
       display: grid;
-      grid-template-columns: 1fr 44% 1fr;
+      grid-template-columns: 1fr 72%;
       gap: toRem(30);
       align-items: center;
       padding-top: toRem(150);
@@ -131,15 +131,21 @@
 }
 
 .slide-hero {
-   aspect-ratio: 1 / 1;
-   border: toRem(1) solid $bgGold;
-   @include adaptiveValue("padding", 24, 10);
-   border-radius: 50%;
-   flex: 1 1 auto;
+
    &--mini {
       flex: 0 0 auto;
       padding: toRem(3);
       width: toRem(117);
+   }
+   // .slide-hero__content
+
+   &__content {
+      aspect-ratio: 1 / 1;
+      border: toRem(1) solid $bgGold;
+      @include adaptiveValue("padding", 24, 10);
+      border-radius: 50%;
+      flex: 1 1 auto;
+      position: relative;
    }
    // .slide-hero__body
 

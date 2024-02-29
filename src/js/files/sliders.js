@@ -3,7 +3,7 @@
  */
 
 import Swiper from 'swiper';
-import { Navigation, Controller } from 'swiper/modules';
+import { Navigation, Controller, Parallax } from 'swiper/modules';
 
 //Базові стилі
 //import "../../scss/base/swiper.scss";
@@ -19,13 +19,41 @@ import { Navigation, Controller } from 'swiper/modules';
 function initSliders() {
    if (document.querySelector('.hero__slider')) { 
        // Створюємо слайдер
+    //    const miniSlider = new Swiper('.hero__mini-slider', { 
+           
+    //     modules: [Navigation,Controller],
+    //     observer: true,
+    //     observeParents: true,
+    //     slidesPerView: "auto",
+    //     spaceBetween: 20,
+    //     slideToClickedSlide: true,
+    //     addSlidesAfter: 4,
+    //     //autoHeight: true,
+    //     speed: 800,
+    //     loop: true,     
+    //     // Події
+    //     on: {
+    //         init: function (slider) {
+    //          slider.slides.forEach(slide =>{
+    //              const imageSrc = slide.querySelector('.slide-hero__image').getAttribute('src');
+    //              const topImage = `									
+    //              <div class="slide-hero__top-image">
+    //                 <img src="${imageSrc}" alt="Image">
+    //              </div>
+    //              `;
+    //              slide.insertAdjacentHTML('beforeend',topImage);
+    //          })
+    //         }
+    //     }
+    //    });
        const mainSlider = new Swiper('.hero__slider', { 
            
-           modules: [Navigation,Controller],
+           modules: [Navigation,Controller,Parallax],
            observer: true,
            observeParents: true,
-           slidesPerView: 'auto',
-           spaceBetween: 0,
+           slidesPerView: 1.5,
+           spaceBetween: 30,
+           parallax: true,
            //autoHeight: true,
            speed: 800,
            loop: true,
@@ -91,7 +119,6 @@ function initSliders() {
             // },
                         
            },
-           
            // Події
            on: {
                init: function (slider) {
@@ -102,7 +129,8 @@ function initSliders() {
                        <img src="${imageSrc}" alt="Image">
                     </div>
                     `;
-                    slide.insertAdjacentHTML('beforeend',topImage);
+                    var slideContent = slide.querySelector('.slide-hero__content');
+                    slideContent.insertAdjacentHTML('beforeend',topImage);
                 })
                }
             // slideChange: function () {
@@ -165,98 +193,8 @@ function initSliders() {
    
            }
        });
-       const miniSlider = new Swiper('.hero__mini-slider', { 
-           
-        modules: [Navigation,Controller],
-        observer: true,
-        observeParents: true,
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        loopAdditionalSlides:10,
-        slideToClickedSlide: true,
-        //autoHeight: true,
-        speed: 800,
-        loop: true,
-        //autoHeight: true,
-        //centeredSlides: true,
-
-        //touchRatio: 0,
-        //simulateTouch: false,
-        //loop: true,
-
-        // Підгрузка забражень class к img "swiper-lazy"
-        //preloadImages: false,
-        //lazy: true,
-
-        /*
-        // Еффекти
-        effect: 'fade',
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        */
-
-        // Пагінація
-        /*
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        */
-
-        // Скроллбар
-        /*
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,
-        },
-        */
-        /*
-        navigation: {
-            prevEl: '.hero__arrow--left',
-            nextEl: '.hero__arrow--right',
-        },
-        */
-        
-        breakpoints: {
-         // 640: {
-         //       slidesPerView: 1,
-         //       spaceBetween: 0,
-         //       autoHeight: true,
-         // },
-         // 768: {
-         //       slidesPerView: 2,
-         //       spaceBetween: 20,
-         // },
-         // 992: {
-         //    slidesPerView: 3,
-         //    spaceBetween: 20,
-         // },
-         // 1268: {
-         //    slidesPerView: 4,
-         //    spaceBetween: 20,
-         // },
-                     
-        },
-        
-        // Події
-        on: {
-            init: function (slider) {
-             slider.slides.forEach(slide =>{
-                 const imageSrc = slide.querySelector('.slide-hero__image').getAttribute('src');
-                 const topImage = `									
-                 <div class="slide-hero__top-image">
-                    <img src="${imageSrc}" alt="Image">
-                 </div>
-                 `;
-                 slide.insertAdjacentHTML('beforeend',topImage);
-             })
-            }
-        }
-       });
-       mainSlider.controller.control = miniSlider;
-       miniSlider.controller.control = mainSlider;
+       //mainSlider.controller.control = miniSlider;
+      // miniSlider.controller.control = mainSlider;
    }
 }
 document.addEventListener("DOMContentLoaded", initSliders);
