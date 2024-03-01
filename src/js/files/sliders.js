@@ -19,33 +19,6 @@ import { Navigation, Controller, Parallax } from 'swiper/modules';
 function initSliders() {
    if (document.querySelector('.hero__slider')) { 
        // Створюємо слайдер
-    //    const miniSlider = new Swiper('.hero__mini-slider', { 
-           
-    //     modules: [Navigation,Controller],
-    //     observer: true,
-    //     observeParents: true,
-    //     slidesPerView: "auto",
-    //     spaceBetween: 20,
-    //     slideToClickedSlide: true,
-    //     addSlidesAfter: 4,
-    //     //autoHeight: true,
-    //     speed: 800,
-    //     loop: true,     
-    //     // Події
-    //     on: {
-    //         init: function (slider) {
-    //          slider.slides.forEach(slide =>{
-    //              const imageSrc = slide.querySelector('.slide-hero__image').getAttribute('src');
-    //              const topImage = `									
-    //              <div class="slide-hero__top-image">
-    //                 <img src="${imageSrc}" alt="Image">
-    //              </div>
-    //              `;
-    //              slide.insertAdjacentHTML('beforeend',topImage);
-    //          })
-    //         }
-    //     }
-    //    });
        const mainSlider = new Swiper('.hero__slider', { 
            
            modules: [Navigation,Controller,Parallax],
@@ -193,8 +166,6 @@ function initSliders() {
    
            }
        });
-       //mainSlider.controller.control = miniSlider;
-      // miniSlider.controller.control = mainSlider;
    }
 }
 document.addEventListener("DOMContentLoaded", initSliders);
