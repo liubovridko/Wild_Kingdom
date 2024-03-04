@@ -24,7 +24,7 @@ function initSliders() {
            modules: [Navigation,Controller,Parallax],
            observer: true,
            observeParents: true,
-           slidesPerView: 1.5,
+           slidesPerView: 'auto',
            spaceBetween: 30,
            parallax: true,
            //autoHeight: true,
@@ -73,23 +73,18 @@ function initSliders() {
    
            
            breakpoints: {
-            // 640: {
-            //       slidesPerView: 1,
-            //       spaceBetween: 0,
-            //       autoHeight: true,
-            // },
-            // 768: {
-            //       slidesPerView: 2,
-            //       spaceBetween: 20,
-            // },
-            // 992: {
-            //    slidesPerView: 3,
-            //    spaceBetween: 20,
-            // },
-            // 1268: {
-            //    slidesPerView: 4,
-            //    spaceBetween: 20,
-            // },
+            320: {
+               centeredSlides:true,
+               spaceBetween: 15,
+            },
+            768: {
+                centeredSlides:true,
+                spaceBetween: 30,
+             },
+            1200: {
+               centeredSlides:false,
+               spaceBetween: 30,
+            },
                         
            },
            // Події
