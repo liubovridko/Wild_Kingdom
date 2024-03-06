@@ -176,6 +176,61 @@
       }
    }
 }
+//=========================================================================================================
+.about-us {
+
+   // .about-us__container
+
+   &__container.about {
+      display: grid;
+      @include adaptiveValue('padding-top', 190, 30);
+      @include adaptiveValue('padding-bottom', 80, 30);
+      @include adaptiveValue('gap', 134, 15);
+      grid-template-columns: 51.25% 1fr;
+   }
+
+   // .about-us__image
+
+   &__image {
+      img{
+         max-width: 100%;
+      }
+   }
+
+   // .about-us__content
+
+   &__content {
+   }
+
+   // .about-us__block-header
+
+   &__block-header {
+   }
+      // .about-us__services
+
+   &__services {
+   }
+}
+
+.services-about-us {
+
+   // .services-about-us__item
+
+   &__item {
+   }
+
+   // .services-about-us__icon
+
+   &__icon {
+   }
+
+   // .services-about-us__label
+
+   &__label {
+   }
+}
+
+
 
 
 
