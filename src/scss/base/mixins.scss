@@ -93,6 +93,8 @@
     column-gap: $flyValue;
  } @else if $property == 'flex-basis' {
     flex-basis: $flyValue;
+ } @else if $property == 'gap' {
+      gap: $flyValue;
  } @else {
    // Handle other properties as needed
    // ...
@@ -131,6 +133,8 @@
         left: $keepSize;
      } @else if $property == 'flex-basis' {
         flex-basis: $keepSize;
+     } @else if $property == 'gap' {
+         gap: $keepSize;
      } @else {
        // Handle other properties as needed
        // ...

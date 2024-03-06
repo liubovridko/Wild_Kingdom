@@ -68,15 +68,34 @@
 @import "libs/normalize";
 
 body {
-	background: $background;
+	background-color: $background;
 	font-family: $fontFamily;
 	font-size: $fontSize;
+   //скролл заблоковано
+   .lock &{
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
+   //Сайт завантажено
+   .loaded &{
+   }
 }
 
 html,
 body,
 .wrapper {
-	height: 100%;
+	// min-height: 100%;
+   // display: flex;
+   // flex-direction: column;
+   // overflow: hidden;
+   // @supports (overflow: clip){
+   //    overflow: clip;
+   // }
+   // //притискаємо footer
+   // > main {
+   //    flex: 1 1 auto;
+   // }
 }
 .page {
 	box-sizing: border-box;
@@ -84,11 +103,3 @@ body,
 
 }
 
-// .wrapper {
-// 	width: calc(100vw - 100px);
-// 	height: 100%;
-// 	background: #ffffff;
-// 	margin: 45px auto;
-// 	border-radius: 10px;
-// 	max-width: 1400px;
-// }
