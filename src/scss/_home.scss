@@ -182,15 +182,18 @@
    // .about-us__container
 
    &__container.about {
-      display: grid;
       @include adaptiveValue('padding-top', 190, 30);
       @include adaptiveValue('padding-bottom', 80, 30);
+   }
+   &__body{
+      display: grid;
       @include adaptiveValue('gap', 134, 15);
       grid-template-columns: 51.25% 1fr;
+      &:not(:last-child){
+         @include adaptiveValue('padding-bottom', 98, 20);
+      }
    }
-
    // .about-us__image
-
    &__image {
       img{
          max-width: 100%;
@@ -213,20 +216,51 @@
 }
 
 .services-about-us {
-
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   justify-content: space-between;
+   gap: toRem(15);
+   max-width: toRem(1024);
+   margin: 0 auto;
+   text-align: center;
    // .services-about-us__item
-
    &__item {
+      display: grid;
+      align-items: center;
+      gap: toRem(29);
    }
-
    // .services-about-us__icon
-
    &__icon {
+      border-radius: 50%;
+      overflow: hidden;
+      width: toRem(140);
+      height: toRem(140);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left:0;
+         opacity: 0.5;
+         transition: opacity 0.3s;
+         background: url("../img/bg-button.jpg")  center / cover no-repeat;
+       }
+       img{
+         position: relative;
+       }
    }
-
    // .services-about-us__label
-
    &__label {
+      font-family: "Italiana";
+      font-size: toRem(24);
+      text-transform: capitalize;
+
    }
 }
 
