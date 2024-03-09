@@ -14,6 +14,21 @@ import { Navigation, Controller, Parallax } from 'swiper/modules';
 
 //import 'swiper/swiper-bundle.css'; 
 
+// Add slider's classes
+// swiper main block, swiper-wrapper cover, swiper-slide for slides
+function bildSliders() {
+    //BildSlider
+    let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)');
+    if (sliders) {
+        sliders.forEach(slider => {
+            slider.parentElement.classList.add('swiper');
+            slider.classList.add('swiper-wrapper');
+            for (const slide of slider.children) {
+                slide.classList.add('swiper-slide');
+            }
+        });
+    }
+}
 
 // init Swiper:
 function initSliders() {
@@ -163,29 +178,44 @@ function initSliders() {
        });
    }
 }
-document.addEventListener("DOMContentLoaded", initSliders);
 
-//Scroll on base slider
-function initSlidersScroll(){
-    let sliderScrollItems=document.querySelector('.swiper_scroll');
+// Scroll on base slider (class swiper_scroll for wrapper slider)
+function initSlidersScroll() {
+    // Добавление классов слайдера
+    // при необходимости отключить
+    bildSliders();
+
+    let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
     if (sliderScrollItems.length > 0) {
-        for (let index=0; index < sliderScrollItems.lenght; index++) {
+        for (let index = 0; index < sliderScrollItems.length; index++) {
             const sliderScrollItem = sliderScrollItems[index];
             const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
             const sliderScroll = new Swiper(sliderScrollItem, {
-                observer:true,
-                observeParents:true,
-                direction:'vertical',
-                slidesPerView:'auto',
-                freeMode:{
-                    enabled:true,
+                observer: true,
+                observeParents: true,
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: {
+                    enabled: true,
                 },
-                scrollbar:{
-                    el:sliderScrollBar,
+                scrollbar: {
+                    el: sliderScrollBar,
+                    draggable: true,
+                    snapOnRelease: false
                 },
-            })
+                mousewheel: {
+                    releaseOnEdges: true,
+                },
+            });
+            sliderScroll.scrollbar.updateSize();
         }
     }
 }
 
+window.addEventListener("load", function (e) {
+    // Запуск инициализации слайдеров
+    initSliders();
+    // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
+    //initSlidersScroll();
+});
 
