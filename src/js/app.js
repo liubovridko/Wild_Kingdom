@@ -14,3 +14,9 @@ flsFunctions.spollers()
 Документація https://swiperjs.com/
  */
 import "./files/sliders.js"
+
+//Функції роботи скролом
+import * as flsScroll from "./files/scroll/scroll.js";
+
+//функція додавання класів до хедеру під час прокручування
+flsScroll.headerScroll();
