@@ -20,3 +20,5 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 //функція додавання класів до хедеру під час прокручування
 flsScroll.headerScroll();
+// Модуль поекраної прокрутки
+// import './modules/fullpage.js'
