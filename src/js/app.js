@@ -22,3 +22,8 @@ import * as flsScroll from "./files/scroll/scroll.js";
 flsScroll.headerScroll();
 // Модуль поекраної прокрутки
 // import './modules/fullpage.js'
+
+/*
+Попапи
+*/
+// import './modules/popups.js'
