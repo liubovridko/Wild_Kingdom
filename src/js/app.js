@@ -27,3 +27,5 @@ flsScroll.headerScroll();
 Попапи
 */
 // import './modules/popups.js'
+// Работа з формами ======================================================
+import * as flsForms from './modules/forms.js'
