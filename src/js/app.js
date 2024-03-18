@@ -27,5 +27,16 @@ flsScroll.headerScroll();
 Попапи
 */
 // import './modules/popups.js'
-// Работа з формами ======================================================
+// Робота з формами ======================================================
 import * as flsForms from './modules/forms.js'
+
+/* Робота з полями форми: додавання класів, робота з placeholder */
+// flsForms.formFieldsInit()
+/* Відправляє форму з вбудованою валідацією полів. false – відключити валідацію */
+// flsForms.formSubmit(true)
+
+/* Модуль форми "показати пароль" */
+// flsForms.formViewpass()
+
+/* Модуль форми "кількість" (Quantity) */
+// flsFunctions.formQuantity()

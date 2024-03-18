@@ -305,3 +305,26 @@ export function spollers() {
     }
   }
 }
+// *** Модуль форми кількість
+export function formQuantity() {
+  const quantity = document.querySelector('.quantity')
+  const quantityValue = document.querySelector('.quantity input')
+  const quantityPlus = document.querySelector('.quantity__button-plus')
+  const quantityMinus = document.querySelector('.quantity__button-minus')
+  if (quantity) {
+    let count = 1
+
+    quantityPlus.addEventListener('click', () => {
+      count++
+      count = count < 10 ? `0${count}` : count
+      quantityValue.value = count
+    })
+    quantityMinus.addEventListener('click', () => {
+      if (count > 1) {
+        count--
+        count = count < 10 ? `0${count}` : count
+        quantityValue.value = count
+      }
+    })
+  }
+}
