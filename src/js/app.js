@@ -40,3 +40,6 @@ import * as flsForms from './modules/forms.js'
 
 /* Модуль форми "кількість" (Quantity) */
 // flsFunctions.formQuantity()
+
+/* Модуль зіркового рейтингу */
+// import './modules/rating.js'
