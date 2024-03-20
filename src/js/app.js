@@ -43,3 +43,10 @@ import * as flsForms from './modules/forms.js'
 
 /* Модуль зіркового рейтингу */
 // import './modules/rating.js'
+
+// Модуль роботи з ползунком ======================================================
+/*
+Підключення та налаштування виконується у файлі range.js
+Документація плагіна: https://refreshless.com/nouislider/
+*/
+// import "./modules/range.js"
