@@ -50,3 +50,7 @@ import * as flsForms from './modules/forms.js'
 Документація плагіна: https://refreshless.com/nouislider/
 */
 // import "./modules/range.js"
+
+// Робота з Табами ======================================================
+ // Опис в tabs.js
+// import './modules/tabs.js'
