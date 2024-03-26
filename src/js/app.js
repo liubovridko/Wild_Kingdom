@@ -64,3 +64,6 @@ import * as flsForms from './modules/forms.js'
 // <div id="select"></div>
 
 // import './modules/select.js'
+
+/* Підключаю файл зі своїм кодом */
+import './modules/script.js'
